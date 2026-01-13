@@ -13,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<FuncionarioRepository>();
-builder.Services.AddScoped<RegistroPontoRepository>();
+builder.Services.AddScoped<RegistroPontoDAL>();
 
 // JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

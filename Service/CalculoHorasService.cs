@@ -11,12 +11,15 @@ namespace FolhaPonto.Api.Service
 
             foreach (var r in registros)
             {
-                if (r.Tipo == TipoRegistroPonto.Entrada)
-                    entrada = r.DataHora;
-
-                if (r.Tipo == TipoRegistroPonto.Saida && entrada.HasValue)
+                //1 - entrada, 2 - saida, 3 - inicio intervalo, 4 - fim intervalo
+                if (r.tipo == 1)
                 {
-                    total += r.DataHora - entrada.Value;
+                    entrada = r.datahora;
+                }
+
+                if (r.tipo == 2 && entrada.HasValue)
+                {
+                    total += r.datahora - entrada.Value;
                     entrada = null;
                 }
             }

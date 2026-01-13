@@ -2,9 +2,9 @@
 {
     public class RegistroPonto
     {
-        public int Id { get; set; }
-        public int FuncionarioId { get; set; }
-        public DateTime DataHora { get; set; }
-        public TipoRegistroPonto Tipo { get; set; }
+        public int id { get; set; }
+        public int funcionario_id { get; set; }
+        public DateTime datahora { get; set; }
+        public int tipo { get; set; }
     }
 }
