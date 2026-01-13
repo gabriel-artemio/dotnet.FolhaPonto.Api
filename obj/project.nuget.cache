@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QVelLQkICgQ=",
+  "dgSpecHash": "USQR3QXzJbQ=",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\projetos_dev\\dotnet\\FolhaPonto.Api\\FolhaPonto.Api.csproj",
+  "projectFilePath": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\FolhaPonto.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arlab\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\arlab\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",

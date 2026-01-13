@@ -1105,11 +1105,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\projetos_dev\\dotnet\\FolhaPonto.Api\\FolhaPonto.Api.csproj",
+      "projectUniqueName": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\FolhaPonto.Api.csproj",
       "projectName": "FolhaPonto.Api",
-      "projectPath": "D:\\Projetos\\projetos_dev\\dotnet\\FolhaPonto.Api\\FolhaPonto.Api.csproj",
+      "projectPath": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\FolhaPonto.Api.csproj",
       "packagesPath": "C:\\Users\\arlab\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\projetos_dev\\dotnet\\FolhaPonto.Api\\obj\\",
+      "outputPath": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
