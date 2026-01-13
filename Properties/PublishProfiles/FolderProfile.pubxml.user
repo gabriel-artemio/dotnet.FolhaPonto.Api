@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\webservices_hospedados\estoque_api</_PublishTargetUrl>
+    <History>True|2026-01-09T15:08:31.3288875Z||;True|2026-01-08T15:00:26.3765775-03:00||;True|2025-11-14T16:05:48.9577175-03:00||;True|2024-11-22T16:19:01.9707720-03:00||;True|2024-10-25T15:02:43.6186753-03:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
