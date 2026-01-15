@@ -13,10 +13,10 @@ namespace FolhaPonto.Api.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly FuncionarioRepository _repo;
+        private readonly FuncionarioDAL _repo;
         private readonly IConfiguration _config;
 
-        public AuthController(FuncionarioRepository repo, IConfiguration config)
+        public AuthController(FuncionarioDAL repo, IConfiguration config)
         {
             _repo = repo;
             _config = config;
@@ -26,9 +26,11 @@ namespace FolhaPonto.Api.Controllers
         public IActionResult Login(string email, string senha)
         {
             var funcionario = _repo.ObterPorEmail(email);
-            if (funcionario == null || funcionario.Senha != senha)
+            if (funcionario == null || funcionario.senha != senha)
+            {
                 return Unauthorized();
-
+            }
+                
             var token = GerarToken(funcionario);
             return Ok(new { token });
         }
@@ -52,8 +54,8 @@ namespace FolhaPonto.Api.Controllers
 
             var claims = new[]
             {
-            new Claim(ClaimTypes.NameIdentifier, f.Id.ToString()),
-            new Claim(ClaimTypes.Email, f.Email)
+            new Claim(ClaimTypes.NameIdentifier, f.id.ToString()),
+            new Claim(ClaimTypes.Email, f.email)
         };
 
             var key = new SymmetricSecurityKey(
