@@ -79,6 +79,62 @@ namespace FolhaPonto.Api.BLL
             try
             {
                 cn.Open();
+
+                DateTime hoje = DateTime.Today;
+                DateTime dataRegistro = registroPonto.datahora.Date;
+
+                //bloquear ponto retroativo
+                if (dataRegistro < hoje)
+                {
+                    throw new Exception("Não é permitido registrar ponto retroativo.");
+                }
+                    
+                //bloquear ponto futuro
+                if (dataRegistro > hoje)
+                {
+                    throw new Exception("Não é permitido registrar ponto em data futura.");
+                }
+                    
+                //pegando o ultimo registro do dia
+                var ultimoPonto = registroPontoDAL.GetUltimoRegistroDia(
+                    cn,
+                    registroPonto.funcionario_id,
+                    registroPonto.datahora
+                );
+
+                //se for o primeiro ponto do dia
+                if (ultimoPonto == null)
+                {
+                    if (registroPonto.tipo != 1)
+                        throw new Exception("O primeiro registro do dia deve ser ENTRADA.");
+                }
+                else
+                {
+                    //não pode repetir o mesmo tipo
+                    if (ultimoPonto.tipo == registroPonto.tipo)
+                    {
+                        throw new Exception(
+                            $"Não é permitido registrar {registroPonto.tipo} duas vezes seguidas."
+                        );
+                    }
+                }
+
+                //regra de almoço, ter no mínimo 1 hora
+                if (ultimoPonto != null &&
+                    ultimoPonto.tipo == 3 &&
+                    registroPonto.tipo == 4)
+                {
+                    var intervalo = registroPonto.datahora - ultimoPonto.datahora;
+
+                    if (intervalo.TotalMinutes < 60)
+                    {
+                        throw new Exception(
+                            "O intervalo de almoço deve ser de no mínimo 1 hora."
+                        );
+                    }
+                }
+
+                //regra ok? -> insere
                 registroPontoDAL.Insert(cn, registroPonto);
             }
             catch (Exception ex)

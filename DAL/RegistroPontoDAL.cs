@@ -8,17 +8,21 @@ namespace FolhaPonto.Api.DAL
     {
         public RegistroPonto? GetById(DbConnection cn, int id)
         {
-            return GetAll(cn, id, 0).FirstOrDefault();
+            return GetAll(cn, id, 0, null).FirstOrDefault();
+        }
+        public RegistroPonto? GetUltimoRegistroDia(DbConnection cn, int id, DateTime dataAtual)
+        {
+            return GetAll(cn, id, 0, dataAtual).FirstOrDefault();
         }
         public List<RegistroPonto> GetByFuncionario(DbConnection cn, int funcionario_id)
         {
-            return GetAll(cn, 0, funcionario_id);
+            return GetAll(cn, 0, funcionario_id, null);
         }
         public List<RegistroPonto> GetAll(DbConnection cn)
         {
-            return GetAll(cn, 0, 0);
+            return GetAll(cn, 0, 0, null);
         }
-        private List<RegistroPonto> GetAll(DbConnection cn, int id, int funcionario_id)
+        private List<RegistroPonto> GetAll(DbConnection cn, int id, int funcionario_id, DateTime? dataAtual)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("SELECT ");
@@ -35,6 +39,11 @@ namespace FolhaPonto.Api.DAL
             if (funcionario_id > 0)
             {
                 sb.Append("AND rp.funcionario_id = " + funcionario_id);
+            }
+
+            if (dataAtual != null)
+            {
+                sb.AppendFormat("AND date(rp.datahora) = date('{0}')", dataAtual);
             }
 
             List<RegistroPonto> list = new List<RegistroPonto>();
