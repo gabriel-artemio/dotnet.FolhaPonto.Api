@@ -23,10 +23,6 @@
       "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:models\\registroponto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\models\\tiporegistroponto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:models\\tiporegistroponto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\dal\\registropontodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:dal\\registropontodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -104,18 +100,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "TipoRegistroPonto.cs",
-              "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Models\\TipoRegistroPonto.cs",
-              "RelativeDocumentMoniker": "Models\\TipoRegistroPonto.cs",
-              "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Models\\TipoRegistroPonto.cs",
-              "RelativeToolTip": "Models\\TipoRegistroPonto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:20:53.607Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "RegistroPontoDAL.cs",
               "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\DAL\\RegistroPontoDAL.cs",
               "RelativeDocumentMoniker": "DAL\\RegistroPontoDAL.cs",

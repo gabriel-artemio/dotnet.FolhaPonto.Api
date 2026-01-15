@@ -88,13 +88,13 @@ namespace FolhaPonto.Api.BLL
                 {
                     throw new Exception("Não é permitido registrar ponto retroativo.");
                 }
-                    
+
                 //bloquear ponto futuro
                 if (dataRegistro > hoje)
                 {
                     throw new Exception("Não é permitido registrar ponto em data futura.");
                 }
-                    
+
                 //pegando o ultimo registro do dia
                 var ultimoPonto = registroPontoDAL.GetUltimoRegistroDia(
                     cn,
@@ -106,7 +106,9 @@ namespace FolhaPonto.Api.BLL
                 if (ultimoPonto == null)
                 {
                     if (registroPonto.tipo != 1)
+                    {
                         throw new Exception("O primeiro registro do dia deve ser ENTRADA.");
+                    }
                 }
                 else
                 {
@@ -128,9 +130,41 @@ namespace FolhaPonto.Api.BLL
 
                     if (intervalo.TotalMinutes < 60)
                     {
-                        throw new Exception(
-                            "O intervalo de almoço deve ser de no mínimo 1 hora."
-                        );
+                        throw new Exception("O intervalo de almoço deve ser de no mínimo 1 hora.");
+                    }
+                }
+
+                //Regras de hora extra
+                bool novoEhHoraExtra = registroPonto.tipo == 5 || registroPonto.tipo == 6;
+
+                bool ultimoEhHoraExtra = ultimoPonto != null && (ultimoPonto.tipo == 5 || ultimoPonto.tipo == 6);
+
+                if (novoEhHoraExtra)
+                {
+                    //só pode iniciar hora extra após finalizar expediente
+                    if (registroPonto.tipo == 5)
+                    {
+                        if (ultimoPonto == null || ultimoPonto.tipo != 2)
+                        {
+                            throw new Exception("Só é permitido iniciar hora extra após finalizar o expediente.");
+                        }
+                    }
+
+                    //sequência da hora extra
+                    if (registroPonto.tipo == 6)
+                    {
+                        if (ultimoPonto == null || ultimoPonto.tipo != 5)
+                        {
+                            throw new Exception("A saída de hora extra só pode ocorrer após a entrada de hora extra.");
+                        }
+                    }
+                }
+                else
+                {
+                    //não permitir voltar ao expediente normal após hora extra
+                    if (ultimoEhHoraExtra)
+                    {
+                        throw new Exception("Não é permitido registrar ponto normal após iniciar hora extra.");
                     }
                 }
 

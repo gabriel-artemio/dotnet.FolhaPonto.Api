@@ -58,8 +58,13 @@ namespace FolhaPonto.Api.Controllers
             }
 
             var horasCalculadas = calculoHorasService.CalcularHoras(registroPonto);
+            var horasAlmocoCalculadas = calculoHorasService.CalcularHorasAlmoco(registroPonto);
 
-            return new HorasCalculadas() { registros = registroPonto, horasCalculadas = horasCalculadas };
+            return new HorasCalculadas() { 
+                registros = registroPonto, 
+                horasCalculadas = horasCalculadas, 
+                horasAlmocoCalculadas = horasAlmocoCalculadas 
+            };
         }
         [HttpPost]
         public dynamic Insert([FromBody] RegistroPonto registroPonto)
