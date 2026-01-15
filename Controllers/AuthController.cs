@@ -1,4 +1,4 @@
-﻿using FolhaPonto.Api.DAL;
+﻿using FolhaPonto.Api.BLL;
 using FolhaPonto.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -12,19 +12,19 @@ namespace FolhaPonto.Api.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly FuncionarioDAL _repo;
+        private readonly FuncionarioBLL _bll;
         private readonly IConfiguration _config;
 
-        public AuthController(FuncionarioDAL repo, IConfiguration config)
+        public AuthController(FuncionarioBLL bll, IConfiguration config)
         {
-            _repo = repo;
+            _bll = bll;
             _config = config;
         }
 
         [HttpPost("login")]
         public IActionResult Login(string email, string senha)
         {
-            var funcionario = _repo.ObterPorEmail(email);
+            var funcionario = _bll.GetByEmail(email);
             if (funcionario == null || funcionario.senha != senha)
             {
                 return Unauthorized();
@@ -43,7 +43,7 @@ namespace FolhaPonto.Api.Controllers
                     new { message = "O funcionário não pode ser nulo" });
             }
 
-            _repo.Inserir(funcionario);
+            _bll.Insert(funcionario);
             return Ok(funcionario);
         }
 

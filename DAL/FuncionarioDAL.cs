@@ -8,21 +8,6 @@ namespace FolhaPonto.Api.DAL
 {
     public class FuncionarioDAL
     {
-        private readonly string _connectionString;
-
-        public FuncionarioDAL(IConfiguration config)
-        {
-            _connectionString = config.GetConnectionString("DefaultConnection")!;
-        }
-
-        public Funcionario? ObterPorEmail(string email)
-        {
-            using var connection = new SqliteConnection(_connectionString);
-
-            var sql = "SELECT * FROM Funcionarios WHERE Email = @Email";
-
-            return connection.QueryFirstOrDefault<Funcionario>(sql, new { Email = email });
-        }
         public Funcionario? GetByEmail(DbConnection cn, string email)
         {
             return GetAll(cn, 0, email).FirstOrDefault();
@@ -36,7 +21,7 @@ namespace FolhaPonto.Api.DAL
             StringBuilder sb = new StringBuilder();
             sb.Append("SELECT ");
             sb.Append("nome, email, senha ");
-            sb.Append("FROM funcionarios f ");
+            sb.Append("FROM funcionario f ");
             sb.Append("WHERE 1 = 1 ");
 
             List<DbParameter> p = new List<DbParameter>();
@@ -71,17 +56,46 @@ namespace FolhaPonto.Api.DAL
             }
             return list;
         }
-
-        public void Inserir(Funcionario funcionario)
+        public void Insert(DbConnection cn, Funcionario funcionario)
         {
-            using var connection = new SqliteConnection(_connectionString);
+            var sql = @"
+            INSERT INTO funcionario
+            (nome, email, senha)
+            VALUES (@nome, @email, @senha)
+            ";
 
-            var sql = """
-            INSERT INTO Funcionarios (Nome, Email, Senha)
-            VALUES (@Nome, @Email, @Senha)
-            """;
+            using (DbCommand cmd = cn.CreateCommand())
+            {
+                cmd.CommandText = sql;
 
-            connection.Execute(sql, funcionario);
+                var pNome = cmd.CreateParameter();
+                pNome.ParameterName = "@nome";
+                pNome.Value = funcionario.nome;
+                cmd.Parameters.Add(pNome);
+
+                var pEmail = cmd.CreateParameter();
+                pEmail.ParameterName = "@email";
+                pEmail.Value = funcionario.email;
+                cmd.Parameters.Add(pEmail);
+
+                var pSenha = cmd.CreateParameter();
+                pSenha.ParameterName = "@senha";
+                pSenha.Value = funcionario.senha;
+                cmd.Parameters.Add(pSenha);
+
+                cmd.ExecuteNonQuery();
+            }
         }
+        //public void Inserir(Funcionario funcionario)
+        //{
+        //    using var connection = new SqliteConnection(_connectionString);
+
+        //    var sql = """
+        //    INSERT INTO Funcionarios (Nome, Email, Senha)
+        //    VALUES (@Nome, @Email, @Senha)
+        //    """;
+
+        //    connection.Execute(sql, funcionario);
+        //}
     }
 }
