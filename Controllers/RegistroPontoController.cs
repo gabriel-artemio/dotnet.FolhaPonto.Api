@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FolhaPonto.Api.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class RegistroPontoController : ControllerBase
@@ -65,6 +65,20 @@ namespace FolhaPonto.Api.Controllers
                 horasCalculadas = horasCalculadas, 
                 horasAlmocoCalculadas = horasAlmocoCalculadas 
             };
+        }
+        [HttpGet("horasExtrasByFuncionario/{id}/{status}")]
+        public List<RegistroPonto>? GetHorasExtras(string id, string status)
+        {
+            int _status = 0;
+            int _id = 0;
+            List<RegistroPonto>? registroPonto = null;
+            CalculoHorasService calculoHorasService = new CalculoHorasService();
+            if (int.TryParse(status, out _status) && int.TryParse(id, out _id))
+            {
+                registroPonto = bll.GetHorasExtras(_id, _status);
+            }
+
+            return registroPonto;
         }
         [HttpPost]
         public dynamic Insert([FromBody] RegistroPonto registroPonto)

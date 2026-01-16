@@ -256,6 +256,62 @@
           }
         }
       }
+    },
+    "/api/RegistroPonto/horasExtras/{id}/{status}": {
+      "get": {
+        "tags": [
+          "RegistroPonto"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegistroPonto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegistroPonto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegistroPonto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -289,6 +345,10 @@
             "type": "string",
             "format": "date-span"
           },
+          "horasAlmocoCalculadas": {
+            "type": "string",
+            "format": "date-span"
+          },
           "registros": {
             "type": "array",
             "items": {
@@ -315,6 +375,10 @@
             "format": "date-time"
           },
           "tipo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
             "type": "integer",
             "format": "int32"
           }

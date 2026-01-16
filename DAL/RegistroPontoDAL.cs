@@ -8,42 +8,52 @@ namespace FolhaPonto.Api.DAL
     {
         public RegistroPonto? GetById(DbConnection cn, int id)
         {
-            return GetAll(cn, id, 0, null).FirstOrDefault();
+            return GetAll(cn, id, 0, null, 0).FirstOrDefault();
         }
         public RegistroPonto? GetUltimoRegistroDia(DbConnection cn, int id, DateTime dataAtual)
         {
-            return GetAll(cn, id, 0, dataAtual).FirstOrDefault();
+            return GetAll(cn, id, 0, dataAtual, 0).FirstOrDefault();
         }
         public List<RegistroPonto> GetByFuncionario(DbConnection cn, int funcionario_id)
         {
-            return GetAll(cn, 0, funcionario_id, null);
+            return GetAll(cn, 0, funcionario_id, null, 0);
+        }
+        public List<RegistroPonto> GetHorasExtras(DbConnection cn, int id, int status)
+        {
+            return GetAll(cn, 0, id, null, status);
         }
         public List<RegistroPonto> GetAll(DbConnection cn)
         {
-            return GetAll(cn, 0, 0, null);
+            return GetAll(cn, 0, 0, null, 0);
         }
-        private List<RegistroPonto> GetAll(DbConnection cn, int id, int funcionario_id, DateTime? dataAtual)
+        private List<RegistroPonto> GetAll(DbConnection cn, int id, int funcionario_id, DateTime? dataAtual, int status)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("SELECT ");
-            sb.Append("id, funcionario_id, datahora, tipo ");
+            sb.Append("id, funcionario_id, datahora, tipo, status ");
             sb.Append("FROM registro_ponto rp ");
             sb.Append("WHERE 1 = 1 ");
 
             List<DbParameter> p = new List<DbParameter>();
             if (id > 0)
             {
-                sb.Append("AND rp.id = " + id);
+                sb.Append(" AND rp.id = " + id);
             }
 
             if (funcionario_id > 0)
             {
-                sb.Append("AND rp.funcionario_id = " + funcionario_id);
+                sb.Append(" AND rp.funcionario_id = " + funcionario_id);
             }
 
             if (dataAtual != null)
             {
-                sb.AppendFormat("AND date(rp.datahora) = date('{0}')", dataAtual);
+                sb.AppendFormat("AND date(rp.datahora) = date('{0}') ", dataAtual);
+                sb.Append(" ORDER BY rp.datahora DESC");
+            }
+
+            if (status > 0)
+            {
+                sb.Append(" AND rp.status = " + status);
             }
 
             List<RegistroPonto> list = new List<RegistroPonto>();
@@ -60,7 +70,8 @@ namespace FolhaPonto.Api.DAL
                             id = dr.GetInt32(0),
                             funcionario_id = dr.GetInt32(1),
                             datahora = dr.GetDateTime(2),
-                            tipo = dr.GetInt32(3)
+                            tipo = dr.GetInt32(3),
+                            status = dr.GetInt32(4)
                         });
                     }
                 }

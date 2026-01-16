@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<FuncionarioRepository>();
+builder.Services.AddScoped<FuncionarioDAL>();
 builder.Services.AddScoped<RegistroPontoDAL>();
 
 // JWT

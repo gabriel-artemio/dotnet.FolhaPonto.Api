@@ -6,5 +6,6 @@
         public int funcionario_id { get; set; }
         public DateTime datahora { get; set; }
         public int tipo { get; set; }
+        public int status { get; set; }
     }
 }

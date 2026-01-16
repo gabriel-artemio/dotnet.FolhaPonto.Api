@@ -2,6 +2,7 @@
 using FolhaPonto.Api.Models;
 using Microsoft.Data.Sqlite;
 using System.Data.Common;
+using System.Net.NetworkInformation;
 
 namespace FolhaPonto.Api.BLL
 {
@@ -63,6 +64,25 @@ namespace FolhaPonto.Api.BLL
             {
                 cn.Open();
                 list = registroPontoDAL.GetByFuncionario(cn, funcionario_id);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return list;
+        }
+        public List<RegistroPonto> GetHorasExtras(int id, int status)
+        {
+            List<RegistroPonto> list = new();
+
+            try
+            {
+                cn.Open();
+                list = registroPontoDAL.GetHorasExtras(cn, id, status);
             }
             catch (Exception ex)
             {
