@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\service\\calculohorasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:service\\calculohorasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\models\\horascalculadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:models\\horascalculadas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\controllers\\registropontocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:controllers\\registropontocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\service\\calculohorasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:service\\calculohorasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\bll\\registropontobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,32 +47,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T12:08:23.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "HorasCalculadas.cs",
               "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Models\\HorasCalculadas.cs",
               "RelativeDocumentMoniker": "Models\\HorasCalculadas.cs",
               "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Models\\HorasCalculadas.cs",
               "RelativeToolTip": "Models\\HorasCalculadas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-16T11:56:27.219Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CalculoHorasService.cs",
               "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Service\\CalculoHorasService.cs",
               "RelativeDocumentMoniker": "Service\\CalculoHorasService.cs",
               "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Service\\CalculoHorasService.cs",
               "RelativeToolTip": "Service\\CalculoHorasService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwDEAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-16T11:54:29.109Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "RegistroPontoController.cs",
               "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Controllers\\RegistroPontoController.cs",
               "RelativeDocumentMoniker": "Controllers\\RegistroPontoController.cs",
@@ -81,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "FuncionarioBLL.cs",
               "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\BLL\\FuncionarioBLL.cs",
               "RelativeDocumentMoniker": "BLL\\FuncionarioBLL.cs",
@@ -93,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FuncionarioDAL.cs",
               "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\DAL\\FuncionarioDAL.cs",
               "RelativeDocumentMoniker": "DAL\\FuncionarioDAL.cs",
@@ -106,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RegistroPontoBLL.cs",
               "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\BLL\\RegistroPontoBLL.cs",
               "RelativeDocumentMoniker": "BLL\\RegistroPontoBLL.cs",
@@ -119,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RegistroPontoDAL.cs",
               "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\DAL\\RegistroPontoDAL.cs",
               "RelativeDocumentMoniker": "DAL\\RegistroPontoDAL.cs",
