@@ -67,7 +67,7 @@ namespace FolhaPonto.Api.Controllers
             };
         }
         [HttpGet("horasExtrasByFuncionario/{id}/{status}")]
-        public List<RegistroPonto>? GetHorasExtras(string id, string status)
+        public HorasExtrasCalculadas GetHorasExtras(string id, string status)
         {
             int _status = 0;
             int _id = 0;
@@ -78,7 +78,13 @@ namespace FolhaPonto.Api.Controllers
                 registroPonto = bll.GetHorasExtras(_id, _status);
             }
 
-            return registroPonto;
+            var horasExtrasCalculadas = calculoHorasService.CalcularHorasExtrasAprovadas(registroPonto);
+
+            return new HorasExtrasCalculadas()
+            {
+                registros = registroPonto,
+                horasExtrasCalculadas = horasExtrasCalculadas
+            };
         }
         [HttpPost]
         public dynamic Insert([FromBody] RegistroPonto registroPonto)

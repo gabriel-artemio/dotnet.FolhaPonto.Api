@@ -86,16 +86,5 @@ namespace FolhaPonto.Api.DAL
                 cmd.ExecuteNonQuery();
             }
         }
-        //public void Inserir(Funcionario funcionario)
-        //{
-        //    using var connection = new SqliteConnection(_connectionString);
-
-        //    var sql = """
-        //    INSERT INTO Funcionarios (Nome, Email, Senha)
-        //    VALUES (@Nome, @Email, @Senha)
-        //    """;
-
-        //    connection.Execute(sql, funcionario);
-        //}
     }
 }

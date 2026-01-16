@@ -108,5 +108,30 @@ namespace FolhaPonto.Api.DAL
                 cmd.ExecuteNonQuery();
             }
         }
+        public void Update(DbConnection cn, RegistroPonto registroPonto)
+        {
+            var sql = @"
+            UPDATE registro_ponto 
+            SET status = @status 
+            WHERE id = @id
+            ";
+
+            using (DbCommand cmd = cn.CreateCommand())
+            {
+                cmd.CommandText = sql;
+
+                var pId = cmd.CreateParameter();
+                pId.ParameterName = "@id";
+                pId.Value = registroPonto.id;
+                cmd.Parameters.Add(pId);
+
+                var pStatus = cmd.CreateParameter();
+                pStatus.ParameterName = "@status";
+                pStatus.Value = registroPonto.status;
+                cmd.Parameters.Add(pStatus);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

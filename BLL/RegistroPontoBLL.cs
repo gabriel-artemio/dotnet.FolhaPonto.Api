@@ -2,7 +2,6 @@
 using FolhaPonto.Api.Models;
 using Microsoft.Data.Sqlite;
 using System.Data.Common;
-using System.Net.NetworkInformation;
 
 namespace FolhaPonto.Api.BLL
 {
@@ -190,6 +189,27 @@ namespace FolhaPonto.Api.BLL
 
                 //regra ok? -> insere
                 registroPontoDAL.Insert(cn, registroPonto);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public void AprovaHoraExtra(List<RegistroPonto> registroPonto)
+        {
+            try
+            {
+                cn.Open();
+
+                foreach (var registro in registroPonto)
+                {
+                    registro.status = 1;
+                    registroPontoDAL.Update(cn, registro);
+                }
             }
             catch (Exception ex)
             {

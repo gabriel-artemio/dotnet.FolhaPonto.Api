@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FolhaPonto.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+135c22fde10516d5cfc4d1920d053813a04a46e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d7167c71afdfe3b014e9cdda949627f7f73260d")]
 [assembly: System.Reflection.AssemblyProductAttribute("FolhaPonto.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FolhaPonto.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
