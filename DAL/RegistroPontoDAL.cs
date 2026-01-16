@@ -80,11 +80,7 @@ namespace FolhaPonto.Api.DAL
         }
         public void Insert(DbConnection cn, RegistroPonto registroPonto)
         {
-            var sql = @"
-            INSERT INTO registro_ponto
-            (funcionario_id, datahora, tipo)
-            VALUES (@funcionario_id, @datahora, @tipo)
-            ";
+            var sql = @"INSERT INTO registro_ponto(funcionario_id, datahora, tipo) VALUES (@funcionario_id, @datahora, @tipo)";
 
             using (DbCommand cmd = cn.CreateCommand())
             {
@@ -110,11 +106,7 @@ namespace FolhaPonto.Api.DAL
         }
         public void Update(DbConnection cn, RegistroPonto registroPonto)
         {
-            var sql = @"
-            UPDATE registro_ponto 
-            SET status = @status 
-            WHERE id = @id
-            ";
+            var sql = @"UPDATE registro_ponto SET status = @status WHERE id = @id";
 
             using (DbCommand cmd = cn.CreateCommand())
             {

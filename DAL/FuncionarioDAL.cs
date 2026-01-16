@@ -1,6 +1,4 @@
-﻿using Dapper;
-using FolhaPonto.Api.Models;
-using Microsoft.Data.Sqlite;
+﻿using FolhaPonto.Api.Models;
 using System.Data.Common;
 using System.Text;
 
@@ -20,7 +18,7 @@ namespace FolhaPonto.Api.DAL
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("SELECT ");
-            sb.Append("nome, email, senha ");
+            sb.Append("nome, email, senha, role ");
             sb.Append("FROM funcionario f ");
             sb.Append("WHERE 1 = 1 ");
 
@@ -49,7 +47,8 @@ namespace FolhaPonto.Api.DAL
                             id = dr.GetInt32(0),
                             nome = dr.GetString(1),
                             email = dr.GetString(2),
-                            senha = dr.GetString(3)
+                            senha = dr.GetString(3),
+                            role = dr.GetInt32(4)
                         });
                     }
                 }
@@ -58,11 +57,7 @@ namespace FolhaPonto.Api.DAL
         }
         public void Insert(DbConnection cn, Funcionario funcionario)
         {
-            var sql = @"
-            INSERT INTO funcionario
-            (nome, email, senha)
-            VALUES (@nome, @email, @senha)
-            ";
+            var sql = @"INSERT INTO funcionario(nome, email, senha, role) VALUES (@nome, @email, @senha, @role)";
 
             using (DbCommand cmd = cn.CreateCommand())
             {
@@ -82,6 +77,11 @@ namespace FolhaPonto.Api.DAL
                 pSenha.ParameterName = "@senha";
                 pSenha.Value = funcionario.senha;
                 cmd.Parameters.Add(pSenha);
+
+                var pRole = cmd.CreateParameter();
+                pRole.ParameterName = "@role";
+                pRole.Value = funcionario.role;
+                cmd.Parameters.Add(pRole);
 
                 cmd.ExecuteNonQuery();
             }

@@ -19,7 +19,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Swagger (SEMPRE antes do Build)
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

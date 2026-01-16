@@ -54,8 +54,9 @@ namespace FolhaPonto.Api.Controllers
             var claims = new[]
             {
             new Claim(ClaimTypes.NameIdentifier, f.id.ToString()),
-            new Claim(ClaimTypes.Email, f.email)
-        };
+            new Claim(ClaimTypes.Email, f.email),
+            new Claim(ClaimTypes.Role, f.role.ToString())
+            };
 
             var key = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(jwt["Key"]!));

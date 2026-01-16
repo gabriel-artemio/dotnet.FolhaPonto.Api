@@ -66,6 +66,7 @@ namespace FolhaPonto.Api.Controllers
                 horasAlmocoCalculadas = horasAlmocoCalculadas 
             };
         }
+
         [HttpGet("horasExtrasByFuncionario/{id}/{status}")]
         public HorasExtrasCalculadas GetHorasExtras(string id, string status)
         {
