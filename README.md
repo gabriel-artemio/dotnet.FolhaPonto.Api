@@ -1,4 +1,4 @@
-# Folha de Ponto Api
+# API Folha de Ponto
 
 ## Stacks utilizadas
 <ol>ASP.NET Core Web API (.NET 8)</ol>
