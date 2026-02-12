@@ -54,7 +54,7 @@ Segue a rotina para usar a api de controle de folha de ponto:
 ### 📦 Registro Ponto
 
 | Método         | Endpoint                                                | Descrição                                     |
-|--------------------------------------------------------------------------|-----------------------------------------------|
+|--------------- |---------------------------------------------------------|-----------------------------------------------|
 | 🔵 **GET**    | `/RegistroPonto`                                         | Lista todos os registros de ponto            |
 | 🔵 **GET**    | `/RegistroPonto/id`                                      | Lista um registro específico por id          |
 | 🔵 **GET**    | `/RegistroPonto/byFuncionario/id`                        | Lista os registros de um funcionário         |
@@ -62,9 +62,12 @@ Segue a rotina para usar a api de controle de folha de ponto:
 | 🔵 **GET**    | `/RegistroPonto/horasExtrasByFuncionario/id/status`      | Lista as horas extras de um funcionário      |
 | 🟢 **POST**   | `/RegistroPonto`                                         | Cadastra uma novo registro de ponto          |
 
-'''/RegistroPonto/horasExtrasByFuncionario/id/status''' : neste endpoint, o usuário informa o status, onde:
-1 = Horas extras para validar
-0 = Horas extras validadas
+🔵 **GET** `/RegistroPonto/horasExtrasByFuncionario/id/status` : neste endpoint, o usuário informa o status, onde:
+
+<ul>
+  <ol>0 = Horas extras para validar</ol>
+  <ol>1 = Horas extras validadas</ol>
+</ul>
 
 ---
 
