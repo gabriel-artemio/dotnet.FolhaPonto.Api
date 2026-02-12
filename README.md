@@ -26,9 +26,10 @@ Segue a rotina para usar a api de controle de folha de ponto:
 <ol>
   <li>Faça a autenticação no sistema.</li>
   <li>Crie um produto.</li>
-  <li>Registre uma entrada para o produto, é necessário inserir produtos no estoque.</li>
-  <li>Dê um GET no estoque e veja o registro de estoque do produto cadastrado, totalmente automático.</li>
-  <li>Registre uma saida para o produto para ver a operação de estoque funcionando.</li>
+  <li>Registre a hora de entrada.</li>
+  <li>Registre a hora de saída para o almoço.</li>
+  <li>Registre a hora de entrada do almoço.</li>
+  <li>Registre a hora de saída.</li>
 </ol>
 
 ---
@@ -49,93 +50,35 @@ Segue a rotina para usar a api de controle de folha de ponto:
   "senha": "string"
 }
 ```
-<!-- 
-### 📦 Entrada Produto
+ 
+### 📦 Registro Ponto
 
-| Método  | Endpoint                 | Descrição                                 |
-|--------|---------------------------|-------------------------------------------|
-| 🔵 **GET**    | `/EntradaProduto`         | Lista todas as entradas de produtos       |
-| 🔵 **GET**    | `/EntradaProduto/id`      | Lista a entrada de produto por id         |
-| 🟢 **POST**   | `/EntradaProduto`         | Cadastra uma nova entrada de produto      |
+| Método         | Endpoint                                                | Descrição                                     |
+|--------------------------------------------------------------------------|-----------------------------------------------|
+| 🔵 **GET**    | `/RegistroPonto`                                         | Lista todos os registros de ponto            |
+| 🔵 **GET**    | `/RegistroPonto/id`                                      | Lista um registro específico por id          |
+| 🔵 **GET**    | `/RegistroPonto/byFuncionario/id`                        | Lista os registros de um funcionário         |
+| 🔵 **GET**    | `/RegistroPonto/horasByFuncionario/id`                   | Lista as horas trabalhadas de um funcionário |
+| 🔵 **GET**    | `/RegistroPonto/horasExtrasByFuncionario/id/status`      | Lista as horas extras de um funcionário      |
+| 🟢 **POST**   | `/RegistroPonto`                                         | Cadastra uma novo registro de ponto          |
 
----
-
-### 📝 Exemplo de POST (EntradaProduto)
-
-```json
-{
-  "id_produto": int,
-  "qtde": int,
-  "valor_unitario": decimal,
-  "data_entrada": DateTime
-}
-```
-
-### 📦 Estoque
-
-| Método  | Endpoint           | Descrição                                 |
-|--------|---------------------|-------------------------------------------|
-| 🔵 **GET**    | `/Estoque`          | Lista todos os registros do estoque       |
-| 🔵 **GET**    | `/Estoque/id`       | Lista o registro de estoque por id        |
+'''/RegistroPonto/horasExtrasByFuncionario/id/status''' : neste endpoint, o usuário informa o status, onde:
+1 = Horas extras para validar
+0 = Horas extras validadas
 
 ---
 
-### 📦 Produto
-
-| Método         | Endpoint           | Descrição                                 |
-|----------------|---------------------|-------------------------------------------|
-| 🔵 **GET**    | `/Produto`          | Lista todas os produtos                   |
-| 🔵 **GET**    | `/Produto/id`       | Lista o produto por id                    |
-| 🟢 **POST**   | `/Produto`          | Cadastra um novo produto                  |
-| 🟡 **PUT**    | `/Produto/id`       | Edita um novo produto                     |
-| 🔴 **DELETE** | `/Produto/id`       | Apaga um novo produto                     |
-
----
-
-### 📝 Exemplo de POST (Produto)
+### 📝 Exemplo de POST (RegistroPonto)
 
 ```json
 {
-  "status": "string",
-  "descricao": "string",
-  "estoque_minino": 0,
-  "estoque_maximo": 0
+  "funcionario_id": 0,
+  "datahora": DateTime,
+  "tipo": 0,
+  "status": 0
 }
 ```
 
-### 📝 Exemplo de PUT (Produto)
-
-```json
-{
-  "status": "string",
-  "descricao": "string",
-  "estoque_minino": 0,
-  "estoque_maximo": 0
-}
-```
-
-### 📦 Saída Produto
-
-| Método         | Endpoint             | Descrição                                 |
-|----------------|-----------------------|-------------------------------------------|
-| 🔵 **GET**    | `/SaidaProduto`       | Lista todas as saidas de produtos         |
-| 🔵 **GET**    | `/SaidaProduto/id`    | Lista a saida de produto por id           |
-| 🟢 **POST**   | `/SaidaProduto`       | Cadastra uma nova saida de produto        |
-
----
-
-### 📝 Exemplo de POST (SaidaProduto)
-
-```json
-{
-  "id_produto": int,
-  "qtde": int,
-  "valor_unitario": decimal,
-  "data_entrada": DateTime
-}
-```
-
--->
 📍 Observações
 
 A API segue o padrão REST
