@@ -3,36 +3,24 @@
   "WorkspaceRootPath": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\dal\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:dal\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\service\\calculohorasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:service\\calculohorasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\controllers\\registropontocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:controllers\\registropontocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\bll\\registropontobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:bll\\registropontobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\bll\\funcionariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:bll\\funcionariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\models\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:models\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\dal\\registropontodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:dal\\registropontodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\dal\\funcionariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:dal\\funcionariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|d:\\projetos\\projetos_dev\\dotnet\\dotnet.folhaponto.api\\bll\\funcionariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E34E4A02-A4FD-4DF8-B727-C9C5D071B646}|FolhaPonto.Api.csproj|solutionrelative:bll\\funcionariobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,103 +33,70 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DatabaseInitializer.cs",
-              "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\DAL\\DatabaseInitializer.cs",
-              "RelativeDocumentMoniker": "DAL\\DatabaseInitializer.cs",
-              "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\DAL\\DatabaseInitializer.cs",
-              "RelativeToolTip": "DAL\\DatabaseInitializer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T14:52:31.066Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAIwDcAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T12:08:23.102Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-12T20:45:07.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CalculoHorasService.cs",
-              "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Service\\CalculoHorasService.cs",
-              "RelativeDocumentMoniker": "Service\\CalculoHorasService.cs",
-              "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Service\\CalculoHorasService.cs",
-              "RelativeToolTip": "Service\\CalculoHorasService.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowDEAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T11:54:29.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "RegistroPontoController.cs",
               "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Controllers\\RegistroPontoController.cs",
               "RelativeDocumentMoniker": "Controllers\\RegistroPontoController.cs",
               "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Controllers\\RegistroPontoController.cs",
               "RelativeToolTip": "Controllers\\RegistroPontoController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAIwD4AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T00:47:00.784Z"
+              "WhenOpened": "2026-01-16T15:07:44.504Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FuncionarioBLL.cs",
-              "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\BLL\\FuncionarioBLL.cs",
-              "RelativeDocumentMoniker": "BLL\\FuncionarioBLL.cs",
-              "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\BLL\\FuncionarioBLL.cs",
-              "RelativeToolTip": "BLL\\FuncionarioBLL.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCMAAAAbAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Funcionario.cs",
+              "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Models\\Funcionario.cs",
+              "RelativeDocumentMoniker": "Models\\Funcionario.cs",
+              "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\Models\\Funcionario.cs",
+              "RelativeToolTip": "Models\\Funcionario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T22:01:22.129Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FuncionarioDAL.cs",
-              "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\DAL\\FuncionarioDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\FuncionarioDAL.cs",
-              "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\DAL\\FuncionarioDAL.cs",
-              "RelativeToolTip": "DAL\\FuncionarioDAL.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAwwFkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T21:53:29.936Z"
+              "WhenOpened": "2026-01-16T15:02:55.308Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RegistroPontoBLL.cs",
-              "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\BLL\\RegistroPontoBLL.cs",
-              "RelativeDocumentMoniker": "BLL\\RegistroPontoBLL.cs",
-              "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\BLL\\RegistroPontoBLL.cs",
-              "RelativeToolTip": "BLL\\RegistroPontoBLL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T14:07:01.918Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "RegistroPontoDAL.cs",
               "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\DAL\\RegistroPontoDAL.cs",
               "RelativeDocumentMoniker": "DAL\\RegistroPontoDAL.cs",
               "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\DAL\\RegistroPontoDAL.cs",
               "RelativeToolTip": "DAL\\RegistroPontoDAL.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAuwG8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAuwGwAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T13:32:16.31Z"
+              "WhenOpened": "2026-01-16T14:59:23.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FuncionarioBLL.cs",
+              "DocumentMoniker": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\BLL\\FuncionarioBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\FuncionarioBLL.cs",
+              "ToolTip": "D:\\Projetos\\projetos_dev\\dotnet\\dotnet.FolhaPonto.Api\\BLL\\FuncionarioBLL.cs",
+              "RelativeToolTip": "BLL\\FuncionarioBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T22:01:22.129Z"
             }
           ]
         }

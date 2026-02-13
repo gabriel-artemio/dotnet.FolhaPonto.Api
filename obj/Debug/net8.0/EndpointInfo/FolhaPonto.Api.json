@@ -325,6 +325,10 @@
           "senha": {
             "type": "string",
             "nullable": true
+          },
+          "role": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
