@@ -65,8 +65,8 @@ Segue a rotina para usar a api de controle de folha de ponto:
 🔵 **GET** `/RegistroPonto/horasExtrasByFuncionario/id/status` : neste endpoint, o usuário informa o status, onde:
 
 <ul>
-  <ol>0 = Horas extras para validar</ol>
-  <ol>1 = Horas extras validadas</ol>
+  <li>0 = Horas extras para validar</li>
+  <li>1 = Horas extras validadas</li>
 </ul>
 
 ---
