@@ -25,7 +25,6 @@ Segue a rotina para usar a api de controle de folha de ponto:
 
 <ol>
   <li>Faça a autenticação no sistema.</li>
-  <li>Crie um produto.</li>
   <li>Registre a hora de entrada.</li>
   <li>Registre a hora de saída para o almoço.</li>
   <li>Registre a hora de entrada do almoço.</li>
